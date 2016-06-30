@@ -1,0 +1,27 @@
+title: Synchronization Objects and Memory Reordering
+author:
+  name: Sean Connolly
+  email:
+  github: maegico
+description: Goes into what memory reordering is, what C++11 Atomic Objects are, Memory Barriers,Semaphores, and the various Mutexes and Locks provided by the Standard Library.
+language: C++
+image:
+  icon: https://cloud.githubusercontent.com/assets/10502938/13506660/28be0300-e14d-11e5-90e3-b194f14e52bd.PNG
+  banner: https://cloud.githubusercontent.com/assets/10502938/13506660/28be0300-e14d-11e5-90e3-b194f14e52bd.PNG
+tags:
+  - C++
+  - Core
+extra_resources:
+  - "http://www.cplusplus.com/reference/atomic/atomic/"
+  - "https://www.youtube.com/watch?v=X1T3IQ4N-3g"
+  - "http://en.cppreference.com/w/cpp/atomic/atomic"
+  - "http://preshing.com/20120913/acquire-and-release-semantics/"
+  - "http://preshing.com/20120710/memory-barriers-are-like-source-control-operations/"
+  - "http://stackoverflow.com/questions/14581090/how-to-correctly-use-stdatomic-signal-fence"
+  - "http://preshing.com/20120710/memory-barriers-are-like-source-control-operations/"
+  - "https://msdn.microsoft.com/en-us/library/windows/desktop/ms684122.aspx"
+  - "http://preshing.com/20130922/acquire-and-release-fences/"
+  - "http://preshing.com/20120625/memory-ordering-at-compile-time/"
+  - "http://preshing.com/20120515/memory-reordering-caught-in-the-act/"
+connections:
+  - "Basic Multithreading"
