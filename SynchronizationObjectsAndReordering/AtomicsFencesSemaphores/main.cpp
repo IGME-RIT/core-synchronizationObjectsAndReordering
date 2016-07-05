@@ -10,10 +10,16 @@ int main()
 
 	//Done with Atomics
 	Atomics atomics;
-	atomics.basics();
+	//atomics.basics();
 
 	/*Fences fences;
 	fences.basicFenceExample();*/
+
+	Mutexes mtxs;
+	//mtxs.mutexExamples();
+
+	Locks locks;
+	locks.lockExamples();
 
 	//The above are all you need in order to continue onto the lockless programming tutorial
 

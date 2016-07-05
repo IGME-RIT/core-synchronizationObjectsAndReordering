@@ -52,7 +52,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Atomics.cpp" />
+    <ClCompile Include="EventObjects.cpp" />
     <ClCompile Include="Fences.cpp" />
     <ClCompile Include="Locks.cpp" />
     <ClCompile Include="main.cpp" />

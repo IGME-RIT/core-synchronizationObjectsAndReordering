@@ -21,7 +21,7 @@ public:
 	void basics();
 };
 
-/*class Semaphores
+class Semaphores
 {
 public:
 	int p;
@@ -30,11 +30,11 @@ public:
 class Mutexes
 {
 public:
-	int p;
+	void mutexExamples();
 };
 
 class Locks
 {
 public:
-	int p;
-};*/
+	void lockExamples();
+};
