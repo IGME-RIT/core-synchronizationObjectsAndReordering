@@ -57,6 +57,10 @@
 		//Invisible in single-thread programs
 		//The effects are only visible in multicore and multiprocessor systems
 
+//Finally one last thing to bring up, remember that volatile keyword?
+	//while preventing this memory reordering and other compiler optimization is one of the main uses of it
+	//this is good to understand if you go and read anything else on advanced multithreading topics
+
 //To prevent memory reordering there are fences or memory barriers
 	//So, a good idea for the next tutorial to read is the Fences.cpp file
 
