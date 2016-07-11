@@ -69,8 +69,12 @@ void Atomics::basics()
 	//Can use the aggregate constructor just like any struct
 	counter2 = { 3 };
 	//Or to save to the individual members of the struct you need to access to the struct's data
-		//do this with _My_val
+		//you can do this with _My_val
 	counter2._My_val.number = 3;
+		//A better way is to save the value into a temporary variable\
+			//More code, but used widely with Lockless techniques and multithreading in general
+	num tempNumStruct = counter2;
+	tempNumStruct.number = 3;
 
 	//How to read from it
 	int temp2 = counter2._My_val.number;
