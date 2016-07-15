@@ -62,7 +62,7 @@ void Locks::lockExamples()
 
 	//Example 3:
 	std::thread t7(func4, 1);
-	std::thread t8(func5, 2);
+	std::thread t8(func4, 2);
 	t7.join();
 	t8.join();
 }
@@ -140,16 +140,26 @@ std::condition_variable cv;
 void func4(int num)
 {
 	std::unique_lock<std::mutex> lck(mtx);
-	//The wait function requires a unique_lock<>
-		//Blocks this threads execution until notified
-		//wait() unlocks the lock and then when it is notified to continue, relocks the lock
-	cv.wait(lck);
+
+	if (num == 1)
+	{
+		//The wait function requires a unique_lock<>
+			//Blocks this threads execution until notified
+			//wait() unlocks the lock and then when it is notified to continue, relocks the lock
+		cv.wait(lck);
+	}
 	for (int i = 0; i < 20; i++)
 	{
 		printf("Thread: %d, Just printing to the screen: %d\n", num, i);
 	}
 
 	printf("\n");
+
+	if (num == 2)
+	{
+		//notify the other thread that this thread is done
+		cv.notify_one();
+	}
 }
 
 void func5(int num)

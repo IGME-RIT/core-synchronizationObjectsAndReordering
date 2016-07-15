@@ -60,7 +60,7 @@ void Mutexes::mutexExamples()
 
 	//Example:
 	tm.lock();
-	//the below will try to obtain the lock for 3 milliseconds before it gives trying to acquire the lock
+	//the below will try to obtain the lock for 3 milliseconds before it stops trying to acquire the lock
 		//this is a blocking call meaning the thread will wait until the time runs out or it obtains the lock
 		//will return true if it succeeds in locking and false otherwise
 		//Used: http://www.cplusplus.com/reference/mutex/timed_mutex/try_lock_for/
@@ -145,7 +145,7 @@ static void func2(int num, int threadNum)
 	//Can Use:
 		//The below tries to lock rtm2 for 1 second and if it fails The function will just continue
 	if (threadNum == 3)
-		v1.push_back(rtm2.try_lock_for(std::chrono::seconds(1)));	//trys to lock it for 1 second and then will give up trying to lock rtm2
+		v1.push_back(rtm2.try_lock_for(std::chrono::seconds(1)));	//tries to lock it for 1 second and then will give up trying to lock rtm2
 	else
 		v2.push_back(rtm2.try_lock_for(std::chrono::seconds(1)));
 
@@ -164,7 +164,7 @@ static void func2(int num, int threadNum)
 	if (num == 0)
 	{
 		//wait a bit to show the try_lock_for() function
-		for (int i = 0; i < 1000000000; i++){}
+		for (long i = 0; i < 1000000000; i++){}
 
 		//While the below is an ugly and naive implementation it makes sure the program runs as intended
 		//The below literally just runs through all of the vector and unlocks as many times as needs be

@@ -31,8 +31,9 @@
 //In this tutorial we will focus on atomic_thread_fence() and how to use it
 	//This is due to its portable nature and the fact that it is a memory fence itself
 
-//Before we start it is important to mention that standard library atomic objects' member functions allow for specifying memory ordering
-	//This means that they don't need fences as they handle their own memory ordering, since 
+//Before we start it is important to mention that standard library atomic objects' member functions allow you to specify memory ordering
+	//This means that they don't need fences as they handle their own memory ordering
+		//Do be careful as they may add fences underneath the hood
 
 //Before you continue, some definitions:
 	//register - a piece of hardware for a CPU core to store small amounts of data for quick access
